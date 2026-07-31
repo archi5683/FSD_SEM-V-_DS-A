@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABES Engineering College</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:90px;
+    background:#000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 50px;
+    z-index:1000;
+    transition:.4s;
+}
+body{
+    overflow-x:hidden;
+}
+
+header img{
+    height:75px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 18px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:gold;
+}
+
+.hero{
+
+    height:100vh;
+    overflow:hidden;
+    position:relative;
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:url("https://static.boostmytalent.com/img/univ/abes-engineering-college-ghaziabad-campus-admission.webp");
+
+    background-size:cover;
+    background-position:center;
+
+    animation:zoom 18s linear infinite alternate;
+
+}
+@keyframes zoom{
+
+from{
+
+transform:scale(1);
+
+}
+
+to{
+
+transform:scale(1.12);
+
+}
+
+}
+
+.overlay{
+    background:rgba(0,0,0,0.25);
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero h1{
+    color:white;
+    font-size:90px;
+}
+
+.hero p{
+    color:white;
+    width:70%;
+    margin:auto;
+    margin-top:25px;
+    font-size:28px;
+    line-height:1.6;
+}
+
+.glance{
+    background:white;
+    padding:80px;
+}
+
+.top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.top h1{
+    font-size:70px;
+    color:#222;
+}
+
+.top p{
+    width:45%;
+    font-size:24px;
+    line-height:1.6;
+}
+
+hr{
+    margin:50px 0;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    row-gap:60px;
+    column-gap:60px;
+}
+
+.box{
+    opacity:0;
+    transform:translateY(40px);
+    animation:fadeUp 1s forwards;
+}
+
+.box:nth-child(1){animation-delay:0.2s;}
+.box:nth-child(2){animation-delay:0.4s;}
+.box:nth-child(3){animation-delay:0.6s;}
+.box:nth-child(4){animation-delay:0.8s;}
+.box:nth-child(5){animation-delay:1s;}
+.box:nth-child(6){animation-delay:1.2s;}
+.box:nth-child(7){animation-delay:1.4s;}
+.box:nth-child(8){animation-delay:1.6s;}
+.box:nth-child(9){animation-delay:1.8s;}
+
+.box h2{
+    color:#9f1d2d;
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+.box h3{
+    font-size:22px;
+    color:#222;
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+.hidden{
+    opacity:0;
+    transform:translateY(60px);
+    transition:all 1s ease;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="https://coursetakers.com/img/uploads/school_images_temp/715bc1ca2a0e4c74bb4c5fbce31c2818.PNG">
+
+<nav>
+
+<a href="#">About</a>
+<a href="#">Admissions</a>
+<a href="#">Academics</a>
+<a href="#">Clubs</a>
+<a href="#">Campus</a>
+<a href="#">Placements</a>
+<a href="#">Research</a>
+<a href="#">Entrepreneurship</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="overlay">
+
+<div>
+
+<h1>
+Welcome to<br>
+ABES
+</h1>
+
+<p>
+Recognized among the best engineering colleges in the Delhi NCR,
+ABES Engineering College blends academic excellence with
+industry-ready learning.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="glance">
+
+<div class="top">
+
+<h1>ABES at a Glance</h1>
+
+<p>
+For over two decades, ABES has firmly established itself in society
+as epitome of outcome-focused learning. Its enduring reputation
+embodies trust and value.
+</p>
+
+</div>
+
+<hr>
+
+<div class="grid">
+
+<div class="box">
+<h2>Est. 2000</h2>
+<h3>Celebrating 26 Years Of Excellence</h3>
+</div>
+
+<div class="box">
+<h2>8090</h2>
+<h3>Students in Campus</h3>
+</div>
+
+<div class="box">
+<h2>24000+</h2>
+<h3>Alumni Worldwide</h3>
+</div>
+
+<div class="box">
+<h2>54</h2>
+<h3>Startups Incubated</h3>
+</div>
+
+<div class="box">
+<h2>60 LPA</h2>
+<h3>Highest Package in Placements 2025</h3>
+</div>
+
+<div class="box">
+<h2>1692</h2>
+<h3>Offers in Placement 2025</h3>
+</div>
+
+<div class="box">
+<h2>15.77 Acres</h2>
+<h3>Campus With All Modern Facilities</h3>
+</div>
+
+<div class="box">
+<h2>500+</h2>
+<h3>Recruiters</h3>
+</div>
+
+<div class="box">
+<h2>2690+</h2>
+<h3>Scopus Publications</h3>
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>
