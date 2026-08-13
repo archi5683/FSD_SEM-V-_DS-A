@@ -6,11 +6,25 @@
     <title>Arrays in JavaScript</title>
 </head>
 <body>
+    <!-- //inner html is used to acess the child element of the parent class
+
+    //parent class -->
+    <p id="demo"> </p>
+
     <script>
-        let car = ["BMW", "Volvo", "Saab", "Ford"]; 
-        for(let i=0; i<car.length; i++){
-            document.write("<br>"+car[i]);
+        let car = ["car1", "car2", "car3"]; //array of cars
+        let text = " "; //empty variable 
+        let len = car.length; //length of array car
+        for(let i=0; i<=len; i++){ 
+           text += car[i] + "<br>"; //adding each element of array to text variable
         }
+        document.getElementById("demo").innerHTML = text; //displaying the text variable in the demo paragraph
+        //printing  alternate elements of array
+        let text1 = " "; //empty variable
+        for(let i=0; i<=len; i+=2){ 
+            text1 += car[i] + "<br>"; //adding alternate elements of array to text1 variable
+        }
+        document.getElementById("demo").innerHTML += text1; //displaying the text1 variable in the demo paragraph
     </script>
 </body>
 </html>
