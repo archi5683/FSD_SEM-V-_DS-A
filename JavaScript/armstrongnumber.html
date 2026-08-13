@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong Number</title>
+</head>
+<body>
+    
+
+    <script>
+       let n = 153;
+       let sum = 0;
+       let temp = n;
+       while(n>0) {
+        let digit = n%10;
+        sum = sum + digit**3;
+        n = Math.floor(n/10);
+       }
+       if(sum==temp){
+        document.write("Armstrong Number");
+       }
+       else{
+        document.write("Not Armstrong Number");
+       }
+    </script>
+</body>
+</html>
