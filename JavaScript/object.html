@@ -23,7 +23,21 @@
         document.write("<br>" + student.class);
         document.write("<br>" + student.fee);
 
-        
+        //acessing all the objects  at once 
+        document.write("<br>" + Object.values(student));
+        document.write("<br>");
+        document.write("<br>" + Object.keys(student));
+        document.write("<br>");
+        document.write("<br>" + Object.entries(student));
+
+        document.write("<br>");
+        document.write("<br>");
+
+        //accessing object using for loop
+        for (let key in student) {
+            document.write("<br>" + key + " : " + student[key]);
+        }
+       
     </script>
 </body>
 </html>
