@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment of Arrow Functions</title>
+</head>
+<body>
+    <script>
+        const car = (c_name, c_cost, c_seat) => {
+            document.write("<br> Car Name: " + c_name);
+            document.write("<br> Car Cost: " + c_cost);
+            document.write("<br> Car Seats: " + c_seat);
+        }
+        const air = (a_name, a_cost, a_seat) => {
+            document.write("<br> Airplane Name: " + a_name);
+            document.write("<br> Airplane Cost: " + a_cost);
+            document.write("<br> Airplane Seats: " + a_seat);
+        }
+        const heli = (h_name, h_cost, h_seat) => {
+            document.write("<br> Helicopter Name: " + h_name);
+            document.write("<br> Helicopter Cost: " + h_cost);
+            document.write("<br> Helicopter Seats: " + h_seat);
+        }
+       
+        let ch = prompt("<br>" + " 1. Car" + "<br>" + " 2. Airplane " + "<br>" + " 3. Helicopter " + "<br>" + " Enter your choice: ");
+        if(ch==1){
+                let carName = prompt("Enter Car Name: ");
+                let carCost ;
+                let carSeats = prompt("Enter Car Seats upto 5: ");
+                if(carSeats == 1){
+                    carCost = "10 Lakh";
+                     }
+                else if(carSeats == 2){
+                    carCost = "20 Lakh";
+             }
+                else if(carSeats == 3){
+                    carCost = "40 Lakh";
+                 }
+             else if(carSeats == 4){
+                carCost = "60 Lakh";
+    }
+            else if(carSeats == 5){
+                carCost = "1 Cr";
+         }
+            else{
+                document.write("Invalid Seats");
+    }
+                car(carName, carCost, carSeats);
+                
+        }
+        else if(ch==2){
+                let airName = prompt("Enter Airplane Name: ");
+                let airCost = prompt("Enter Airplane Cost: ");
+                let airSeats = prompt("Enter Airplane Seats: ");
+                air(airName, airCost, airSeats);
+                
+        }
+        else if(ch==3){
+                let heliName = prompt("Enter Helicopter Name: ");
+                let heliCost = prompt("Enter Helicopter Cost: ");
+                let heliSeats = prompt("Enter Helicopter Seats: ");
+                heli(heliName, heliCost, heliSeats);
+                
+        }
+        else{
+                document.write("<br> Invalid choice");
+        }
+    </script>
+</body>
+</html>
