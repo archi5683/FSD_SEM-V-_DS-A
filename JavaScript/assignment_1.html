@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Card</title>
+</head>
+
+<body style="background-color: #1A1F2C;">
+
+    <div style="text-align:center; 
+                margin-top: 50px; 
+                background-image: url(menu_bg.png); 
+                background-size: cover; 
+                background-position: center;
+                padding: 30px; 
+                border-radius: 15px; 
+                width: 400px; 
+                margin-left: auto; 
+                margin-right: auto;
+                box-shadow: 0px 5px 15px gray;">
+
+        <h2 style="font-size: 30px;">MENU</h2>
+
+        <p style="font-size: 20px;">1. Tea - ₹450</p>
+        <p style="font-size: 20px;">2. Coffee - ₹500</p>
+        <p style="font-size: 20px;">3. Sugar - ₹700</p>
+        <p style="font-size: 20px;">4. Pulses - ₹100</p>
+        <p style="font-size: 20px;">5. Jaggery - ₹200</p>
+
+        <button onclick="showInput()" 
+                style="border-radius: 20px; 
+                       background-color: #c2304f; 
+                       color: white; 
+                       border: none; 
+                       padding: 10px 25px; 
+                       font-size: 17px; 
+                       cursor: pointer;">
+            Buy Items
+        </button>
+
+        <div id="inputBox" style="display: none; margin-top: 20px;">
+
+            <input type="text" id="item" 
+                   placeholder="Enter Item Name"
+                   style="padding: 10px; border-radius: 5px; border: 1px solid gray;">
+
+            <br><br>
+
+            <input type="number" id="quantity" 
+                   placeholder="Enter Quantity"
+                   style="padding: 10px; border-radius: 5px; border: 1px solid gray;">
+
+            <br><br>
+
+            <button onclick="bill()"
+                    style="border-radius: 20px;
+                           background-color: #c2304f;
+                           color: white;
+                           border: none;
+                           padding: 10px 25px;
+                           font-size: 17px;
+                           cursor: pointer;">
+                Generate Bill
+            </button>
+
+        </div>
+    </div>
+
+
+   <div id="bill" 
+     style="display: none;
+            text-align: center;
+            margin: 30px auto;
+            background-image: url('bill.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 25px;
+            border-radius: 15px;
+            width: 400px;
+            box-shadow: 0px 5px 15px gray;">
+</div>
+
+    <script>
+
+        function showInput() {
+            document.getElementById("inputBox").style.display = "block";
+        }
+
+        function bill() {
+
+            const items = {
+                tea: 450,
+                coffee: 500,
+                sugar: 700,
+                pulses: 100,
+                jaggery: 200
+            }
+
+            let i_name = document.getElementById("item").value.toLowerCase();
+            let i_qty = document.getElementById("quantity").value;
+
+            let i_cost = items[i_name] * i_qty;
+
+            document.getElementById("bill").style.display = "block";
+
+            document.getElementById("bill").innerHTML =
+                "<h2>BILL</h2>" +
+                "<p>Item Name: " + i_name + "</p>" +
+                "<p>Item Quantity: " + i_qty + "</p>" +
+                "<p>Item Cost: ₹" + i_cost + "</p>";
+        }
+
+    </script>
+
+</body>
+</html>
