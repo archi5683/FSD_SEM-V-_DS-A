@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Database and filtering</title>
+</head>
+<body>
+    <script>
+        const students = 
+            [
+                {
+                    name: "Archi",
+                    course: "B.Tech",
+                    fee: 100000
+                },
+                {
+                    name: "Ananya",
+                    course: "B.Tech",
+                    fee: 100000
+                },
+                {
+                    name: "Riya",
+                    course: "M.Tech",
+                    fee: 120000
+                },
+                {
+                    name: "Kritika",
+                    course: "MCA",
+                    fee: 120000
+                },
+                {
+                    name: "Khushi",
+                    course: "MCA",
+                    fee: 90000
+                }
+            ];
+                let searchClass = prompt("Enter course to filter:");
+
+                let result = students.filter(student => student.course === searchClass)
+                                        .map(student => student.name);
+
+                if(result.length > 0){
+                    document.write(result);
+                }
+                else{
+                    document.write("No students found for the course");
+                }
+
+        
+
+    </script>
+</body>
+</html>
