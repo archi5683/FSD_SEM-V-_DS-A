@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //map() method is used to create a new array by performing a specific operation on each element of the original array.
+         const num = [21, 32, 73, 44, 55, 66, 77, 88, 99];
+        const evenNum = num.filter((i) => i%2==0);
+    const square = evenNum.map((i) => (i*i));
+    console.log("even numbers", evenNum);
+    console.log("Square of Even Numbers", square);
+    </script>
+</body>
+</html>
