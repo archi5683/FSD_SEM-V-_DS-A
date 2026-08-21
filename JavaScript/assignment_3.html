@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+function login(username, password, callback) {
+
+    let correctUsername = "Archi";
+    let correctPassword = "12345";
+
+    if (username == correctUsername && password == correctPassword) {
+        callback("Username and password are correct");
+    }
+    else {
+        callback("Username and password are incorrect");
+    }
+}
+
+let user = prompt("Enter username");
+let pass = prompt("Enter your password");
+
+function msg(mssg) {
+    document.write(mssg);
+}
+
+login(user, pass, msg);
+
+</script>
+
+</body>
+</html>
